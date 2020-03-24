@@ -29,6 +29,7 @@ public:
             if(*(encoding + i) == ' ')
                 character = 26;
             grid[i] = character;
+            used[character] = 1;
         }
 
         int currentLetter = 0;
@@ -51,14 +52,31 @@ public:
         }
     }
 
-    print(){
-        for(int i = 0; i < 27; i ++){
-            for(int j = 0; j < 27; j ++){
-                if(j == grid[i])cout << "1 ";
-                else cout << "0 ";
+    print()
+    {
+        for(int i = 0; i < 27; i ++)
+        {
+            for(int j = 0; j < 27; j ++)
+            {
+                if(j == grid[i])
+                    cout << "1 ";
+                else
+                    cout << "0 ";
             }
             cout << endl;
         }
+    }
+
+    reverseMatrix()
+    {
+        int newGrid[27];
+
+        for(int i = 0; i < 27; i ++){
+                cout << i << "-" << grid[i] << " --> " << grid[i] << "-" << i << endl;
+            newGrid[grid[i]] = i;
+        }
+
+        assignGrid(newGrid);
     }
 
     Matrix()
@@ -72,15 +90,53 @@ public:
         cout << "Second\n";
         assignGrid(_encoding);
     }
+
+    Matrix operator = (Matrix other)
+    {
+        assignGrid(other.grid);
+        return *this;
+    }
+
+    Matrix operator * (Matrix other)
+    {
+        int newGrid[27];
+
+        for(int i = 0; i < 27; i ++)
+        {
+            newGrid[grid[i]] = other.grid[i];
+        }
+
+        assignGrid(newGrid);
+
+        return *this;
+    }
+
+    Matrix operator ^ (int power)
+    {
+        if(power == 1)
+            return *this;
+        else if(power == 0)
+        {
+            assignGrid();
+            return *this;
+        }
+        else if(power == -1)
+        {
+
+        }
+    }
 };
 
 int main()
 {
     Matrix a;
     char encoding[27];
-    strcpy(encoding, " ejvsordtcqwuxnbgmahkizpfyl");
+    strcpy(encoding, "z");
     Matrix b(encoding);
-    a.print();
-    cout << "-------------------------------\n";
+
+    a = b;
+    b.reverseMatrix();
+    b = b * a;
     b.print();
 }
+// ejvsordtcqwuxnbgmahkizpfyl
