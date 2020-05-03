@@ -5,8 +5,6 @@ using namespace std;
 
 class Matrix
 {
-private:
-    char *_encoding;
 public:
     int grid[27];
     assignGrid()
@@ -85,10 +83,10 @@ public:
         assignGrid();
     }
 
-    Matrix(char *encoding): _encoding(encoding)
+    Matrix(char *encoding)
     {
         cout << "Second\n";
-        assignGrid(_encoding);
+        assignGrid(encoding);
     }
 
     Matrix operator = (Matrix other)

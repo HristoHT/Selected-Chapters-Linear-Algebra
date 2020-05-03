@@ -1,0 +1,99 @@
+#Chat-wrapper {
+    height: 95vh;
+    box-sizing: content-box;
+}
+
+#Chat-wrapper {
+    border-radius: 15px;
+}
+
+#Settings-wrapper {
+    /* background-color: crimson; */
+    margin-top: 1rem;
+    background: url("https://cdn.inspirationhut.net/wp-content/uploads/2012/11/Old-Paper-Texture-3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#Settings-wrapper .Settings-group {
+    padding: 0 1rem;
+    width: 100%;
+    display: block;
+}
+
+#Settings-wrapper .Settings-group div {
+    float: right;
+    width: 50px;
+    text-align: center;
+}
+
+#Chat-panel {
+    height: 80%;
+    overflow-y: auto;
+    background: url("https://cdn.inspirationhut.net/wp-content/uploads/2012/11/Old-Paper-Texture-3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#Chat-input {
+    height: 10%;
+    background: url("https://cdn.inspirationhut.net/wp-content/uploads/2012/11/Old-Paper-Texture-3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#Chat-panel>.row {
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    min-height: 6vh;
+    max-width: 15rem;
+    padding: 0.5rem;
+    border-radius: 25px;
+    word-wrap: break-word;
+    word-wrap: none;
+    display: table-cell;
+    /* border: 1px solid #e1e1e1; */
+    background:rgb(237, 173, 95, 0.2);
+    /* opacity: 0.7; */
+    /* IE8+ and all other modern browsers */
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.text-field {
+    width: 100%;
+}
+
+.my {
+    float: right;
+}
+
+.decripted {
+    border-left: 1px solid rgb(237, 173, 95, 0.5);
+}
+
+.cripted {
+    border-right: 1px solid rgb(237, 173, 95, 0.5);
+    position: relative;
+}
+
+.clock {
+    z-index: '2';
+    position: 'absolute';
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    background-color: 'transperant';
+    vertical-align: bottom;
+}
