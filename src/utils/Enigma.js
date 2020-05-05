@@ -10,7 +10,7 @@ function fromArrToChar(arr) {
 }
 
 function devide(a, b) {
-    return Math.floor(a / b);
+    return a % b;
 }
 
 const Enigma = (demension, offset1, offset2, offset3, S, letter, index) => {
