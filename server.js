@@ -9,11 +9,11 @@ require('dotenv').config();
 //For auth
 const cors = require("cors");
 //
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })); // extended = true is depricated
-app.use(cors({ origin: `http://localhost:3000` })); // Accept cross-origin requests from the frontend app
+// app.use(cors({ origin: `http://localhost:3000` })); // Accept cross-origin requests from the frontend app
 // app.use(function (req, res, next) {
 //     req.io = io;
 //     next();

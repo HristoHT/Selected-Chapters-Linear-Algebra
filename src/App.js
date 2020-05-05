@@ -9,7 +9,7 @@ import cryptWord from './utils/Enigma';
 
 import './css/App.css';
 
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "/"; /* "http://localhost:8080"; */
 
 function App() {
   const [settings, setSettings] = useState({ shift1: 0, shift2: 0, shift3: 0, offset: 1 });
