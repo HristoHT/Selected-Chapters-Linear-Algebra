@@ -4,11 +4,12 @@ const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 //For auth
 const cors = require("cors");
 //
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })); // extended = true is depricated
