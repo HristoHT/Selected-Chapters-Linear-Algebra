@@ -15,9 +15,9 @@ function devide(a, b) {
 
 const Enigma = (demension, offset1, offset2, offset3, S, letter, index) => {
     let letterArr = fromCharToArr(demension, letter),
-        Q1 = math.multiply(C1, math.pow(S, index + offset1)),
-        Q2 = math.multiply(C2, math.pow(S, devide(index, demension * demension) + offset2)),
-        Q3 = math.multiply(C3, math.pow(S, devide(index, demension * demension * demension) + offset3));
+        Q1 = math.multiply(C1, math.pow(S, devide(index + offset1, demension))),
+        Q2 = math.multiply(C2, math.pow(S, devide(Math.floor(index / demension) + offset2), demension)),
+        Q3 = math.multiply(C3, math.pow(S, devide((Math.floor(index / demension * demension) + offset3, demension))));
 
     let cripted = math.multiply(PlugBoard,
         math.multiply(math.inv(Q1),
